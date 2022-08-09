@@ -57,5 +57,7 @@ typedef struct flag_s
 } flag_t;
 
 int _printf(const char *format, ...);
+void clean(va_list args, bufer_t *output);
+int run_printf(const char *format, va_list args, bufer_t *output);
 
 #endif
