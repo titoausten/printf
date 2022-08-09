@@ -29,7 +29,7 @@
 */
 typedef struct bufer_s
 {
-	char *bufer;
+	char *buffer;
 	char *start;
 	unsigned int len;
 } bufer_t;
