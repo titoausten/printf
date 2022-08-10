@@ -90,6 +90,9 @@ unsigned int converts(va_list args, bufer_t *output,
 		unsigned char flags, int width, int precision, unsigned char length);
 unsigned int convertdi(va_list args, bufer_t *output,
 		unsigned char flags, int width, int precision, unsigned char length);
-unsigned int convertb(va_list args, buffer_t *output,
+unsigned int convertb(va_list args, bufer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
+
+unsigned int convertu(va_list args, bufer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 #endif

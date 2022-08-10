@@ -11,7 +11,7 @@
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convertb(va_list args, buffer_t *output,
+unsigned int convertb(va_list args, bufer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned int num;
