@@ -60,10 +60,36 @@ int _printf(const char *format, ...);
 void clean(va_list args, bufer_t *output);
 int run_printf(const char *format, va_list args, bufer_t *output);
 unsigned int _memcpy(bufer_t *output, const char *src, unsigned int n);
-void free_bufer(bufer_t *output);
-bufer_t *init_bufer(void);
+void free_buffer(bufer_t *output);
+bufer_t *init_buffer(void);
 int width_handler(va_list arts, const char *modifier, char *index);
 unsigned char length_handler(const char *modifier, char *index);
 unsigned char flags_handler(const char *flag, char *index);
+int precision_handler(va_list args, const char *modifier, char *index);
+unsigned int (*specifiers_handler(const char *specifier))(va_list,
+		bufer_t *, unsigned char, int, int, unsigned char);
 
+unsigned int printwidth(bufer_t *output, unsigned int printed,
+		unsigned char flags, int width);
+unsigned int printstring_width(bufer_t *output, unsigned char flags,
+		int width, int precision, int size);
+unsigned int printneg_width(bufer_t *output, unsigned int printed,
+		unsigned char flags, int width);
+
+unsigned int convert_sbase(buffer_t *output, long int num, char *base,
+		unsigned char flags, int wid, int prec);
+unsigned int convert_ubase(buffer_t *output,
+		unsigned long int num, char *base,
+		unsigned char flags, int wid, int prec);
+
+unsigned int convertc(va_list args, bufer_t *output,
+		unsigned char flags, int width, int precision, unsigned char length);
+unsigned int convertpercent(va_list args, bufer_t *output,
+		unsigned char flags, int width, int precision, unsigned char length);
+unsigned int converts(va_list args, bufer_t *output,
+		unsigned char flags, int width, int precision, unsigned char length);
+unsigned int convertdi(va_list args, bufer_t *output,
+		unsigned char flags, int width, int precision, unsigned char length);
+unsigned int convertb(va_list args, buffer_t *output,
+		unsigned char flags, int wid, int prec, unsigned char len);
 #endif
