@@ -23,7 +23,7 @@
 
 /**
  * struct bufer_s - A new type defining a bufer struct.
- * @bufer: A pointer to a character array.
+ * @buffer: A pointer to a character array.
  * @start: A pointer to the start of bufer.
  * @len: The length of the string stored in bufer.
 */
@@ -59,5 +59,11 @@ typedef struct flag_s
 int _printf(const char *format, ...);
 void clean(va_list args, bufer_t *output);
 int run_printf(const char *format, va_list args, bufer_t *output);
+unsigned int _memcpy(bufer_t *output, const char *src, unsigned int n);
+void free_bufer(bufer_t *output);
+bufer_t *init_bufer(void);
+int width_handler(va_list arts, const char *modifier, char *index);
+unsigned char length_handler(const char *modifier, char *index);
+unsigned char flags_handler(const char *flag, char *index);
 
 #endif
