@@ -76,9 +76,9 @@ unsigned int printstring_width(bufer_t *output, unsigned char flags,
 unsigned int printneg_width(bufer_t *output, unsigned int printed,
 		unsigned char flags, int width);
 
-unsigned int convert_sbase(buffer_t *output, long int num, char *base,
+unsigned int convert_sbase(bufer_t *output, long int num, char *base,
 		unsigned char flags, int wid, int prec);
-unsigned int convert_ubase(buffer_t *output,
+unsigned int convert_ubase(bufer_t *output,
 		unsigned long int num, char *base,
 		unsigned char flags, int wid, int prec);
 
