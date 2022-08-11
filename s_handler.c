@@ -24,3 +24,8 @@ int get_size(const char *format, int *i)
 
 	return (size);
 }
+
+/**
+ * Project - _printf
+ * Authored by - Tito Osadebey & Precious Uzoma.
+*/

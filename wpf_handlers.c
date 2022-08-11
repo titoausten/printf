@@ -105,3 +105,8 @@ int get_precision(const char *format, int *i, va_list list)
 
 	return (precision);
 }
+
+/**
+ * Project - _printf
+ * Authored by - Tito Osadebey & Precious Uzoma.
+*/
